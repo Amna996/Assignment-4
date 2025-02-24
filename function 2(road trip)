@@ -1,0 +1,26 @@
+#include<stdio.h>
+
+
+float total_fuel_cost(float distance,float fuel_average,float fuel_price)
+{
+	
+    float fuel_consumption=distance/fuel_average*fuel_price;
+    return  fuel_consumption;
+}
+   
+int main()
+{
+	float distance;
+	float fuel_average;
+	float fuel_price;
+	float calculate_fuel_cost;
+	printf("enter distance ");
+	scanf("%f",&distance);
+	printf("enter fuel_average ");
+	scanf("%f",&fuel_average);
+	printf("enter fuel_price ");
+	scanf("%f",&fuel_price);
+	calculate_fuel_cost=total_fuel_cost(distance,fuel_average,fuel_price);
+	printf(" enter total_fuel_cost: %f",calculate_fuel_cost);
+	return 0;
+}

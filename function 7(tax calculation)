@@ -1,0 +1,38 @@
+#include<stdio.h>
+float calculate_income_tax(float  salary)
+{
+	float tax=0.0;
+	if (salary < 600000 )
+	{
+		tax=0;
+	}
+	else if(salary >=600000 && salary<=1200000 )
+	{
+		tax=salary* 0.025;
+	}
+	else if(salary >= 1200000 && salary <= 2400000 )
+	{
+		tax =salary*0.125;
+	}
+	
+	else if(salary >= 2400000 && salary <= 3600000)
+{
+tax=salary* 0.2;
+}
+else 
+
+{
+tax =salary*0.3;
+}
+return tax;
+}
+int main()
+{
+	float salary,annual_salary,tax;
+	printf("enter salary");
+	scanf("%f",&salary);
+	annual_salary=salary*12;
+	tax=float calculate income_tax(annual_salary);
+	printf("annual tax for salaried persons is %f",tax);
+	return 0;
+}

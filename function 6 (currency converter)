@@ -1,0 +1,21 @@
+#include<stdio.h>
+float convert_currency(float amount,float exchange_rate)
+{
+	float PKR=amount*exchange_rate;
+	return PKR;
+}
+int main()
+{
+float amount;
+char currency_type;
+float exchange_rate;
+printf("enter amount");
+scanf("%f",&amount);
+printf("enter currency type(U for USD, S for SAR,A for AED,P for PKR) ");
+scanf("%c",&currency_type);
+printf("enter exchange rate");
+scanf("%f",&exchange_rate);
+float currency=convert_currency(amount,currency_type);
+printf("converted amount in PKR is %f",currency);
+return 0;
+}

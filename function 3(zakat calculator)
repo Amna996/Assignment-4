@@ -1,0 +1,21 @@
+#include<stdio.h>
+float calculate_zakat(float total_wealth,float gold_rate)
+{
+float nisab_gold=87.48*gold_rate;
+if(total_wealth>=gold_rate)
+{
+return total_wealth*0.025;
+}
+return 0;
+}
+int main()
+{
+	float total_wealth,gold_rate;
+	printf("enter total wealth in PKR");
+	scanf("%f",&total_wealth);
+	printf("enter current gold rate in PKR");
+	scanf("%f",&gold_rate);
+	float zakat=calculate_zakat(total_wealth,gold_rate);
+	printf("zakat payable is %f",zakat);
+	return 0;
+}

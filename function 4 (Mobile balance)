@@ -1,0 +1,15 @@
+#include<stdio.h>
+float remaining_balance(float amount)
+{
+	float available_balance=amount*0.705;
+	return available_balance;
+}
+int main()
+{
+float recharge_amount;
+printf("enter  recharge amount");
+scanf("%f",&recharge_amount);
+float balance=remaining_balance(recharge_amount);
+printf("available balance after tax deduction is %f",balance);
+return 0;
+}

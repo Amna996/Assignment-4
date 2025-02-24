@@ -1,0 +1,38 @@
+#include<stdio.h>
+#include<string.h>
+
+float internet_package_cost(int GB,char network[])
+{
+	float cost=0;
+	if
+	(strcmp(network,"zong")==0)
+	{
+		cost=GB*100;
+	}
+	else if(strcmp(network,"jazz")==0)
+	{
+	cost=GB*120;
+	}
+	else if(strcmp(network,"telenor")==0)
+	{
+		cost=GB*90;
+	}
+	else
+{
+	printf("invalid network");
+return -1;
+}
+return cost;
+}
+int main()
+{
+	int GB;
+	char network[10];
+	printf("enter network(jazz,zong,telenor)");
+	scanf("%s",network);
+	printf("enter GB");
+	scanf("%d",&GB);
+	float package_cost=internet_package_cost(GB,network);
+	printf("internet package cost is %f",package_cost);
+	return 0;
+}
