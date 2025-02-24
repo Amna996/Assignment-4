@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<conio.h>
+
+int billcalculate(int unit){
+	if (unit >0 && unit <= 100){
+		return units* 18;
+	}
+	else if (unit>100 && unit <= 200){
+		return units* 22;
+	}
+	else if(unit >200 && unit <= 300){
+		return unit* 26;
+	}
+	else if(unit > 300){
+		return unit* 35;
+	}
+}
+void main( ){
+	printf("enter unit");
+	int units;
+	scanf("%d",&units);
+	int total_bill = billcalculate(units);
+	printf("total bill %d",total_bill);
+}
